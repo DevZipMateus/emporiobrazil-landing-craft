@@ -67,7 +67,7 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="relative rounded-lg overflow-hidden shadow-2xl">
+          <div className="relative rounded-lg overflow-hidden shadow-2xl max-w-md mx-auto md:mx-0">
             <video
               ref={videoRef}
               className="w-full h-auto rounded-lg"
