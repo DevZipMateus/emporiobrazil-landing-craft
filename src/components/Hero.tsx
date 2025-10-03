@@ -76,7 +76,7 @@ const Hero = () => {
               muted
               playsInline
             >
-              <source src="/videos/midia_2.mp4" type="video/mp4" />
+              <source src="/videos/midia_3.mp4" type="video/mp4" />
               Seu navegador não suporta vídeos.
             </video>
             <button
