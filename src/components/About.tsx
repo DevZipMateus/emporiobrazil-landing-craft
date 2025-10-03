@@ -13,7 +13,7 @@ const About = () => {
               loop
               muted
               playsInline
-              className="w-full h-auto rounded-lg shadow-lg"
+              className="w-full h-full object-cover rounded-lg shadow-lg aspect-video"
             />
           </div>
           <div className="prose prose-lg max-w-none">
