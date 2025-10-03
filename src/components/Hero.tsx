@@ -1,21 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { useState, useRef } from "react";
-import { Play, Pause } from "lucide-react";
 
 const Hero = () => {
-  const [isPlaying, setIsPlaying] = useState(true);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const togglePlayPause = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-      } else {
-        videoRef.current.play();
-      }
-      setIsPlaying(!isPlaying);
-    }
-  };
 
   return (
     <section
@@ -67,9 +52,8 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="relative rounded-lg overflow-hidden shadow-2xl max-w-md mx-auto md:mx-0">
+          <div className="rounded-lg overflow-hidden shadow-2xl max-w-md mx-auto md:mx-0">
             <video
-              ref={videoRef}
               className="w-full h-auto rounded-lg"
               loop
               autoPlay
@@ -79,13 +63,6 @@ const Hero = () => {
               <source src="/videos/midia_3.mp4" type="video/mp4" />
               Seu navegador não suporta vídeos.
             </video>
-            <button
-              onClick={togglePlayPause}
-              className="absolute bottom-4 right-4 bg-primary/90 hover:bg-primary text-primary-foreground p-3 rounded-full shadow-lg transition-all"
-              aria-label={isPlaying ? "Pausar vídeo" : "Reproduzir vídeo"}
-            >
-              {isPlaying ? <Pause size={20} /> : <Play size={20} />}
-            </button>
           </div>
         </div>
       </div>
